@@ -20,10 +20,10 @@ export default function Board({ xIsNext, squares, onPlay }: Props) {
 
     let status: string = '';
     if (winner) {
-        status = 'Winner: ' + winner;
+        status = `Winner: ${winner}`;
     }
     if (!winner) {
-        status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+        status = `Next player: ${xIsNext ? 'X' : 'O'}`;
     }
 
     return (
