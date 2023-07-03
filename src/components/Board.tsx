@@ -18,7 +18,8 @@ export default function Board({ xIsNext, squares, onPlay }: Props) {
 
     const winner = calculateWinner(squares);
 
-    let status: string = '';
+    let status: string | null = null;
+
     if (winner) {
         status = `Winner: ${winner}`;
     }
